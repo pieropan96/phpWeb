@@ -44,7 +44,7 @@
                 </ul>
                 Se interessou? Contate-o {{$troca->users_id}} nome...<br>
                 {{Form::open(['route'=>['trocas.destroy',$troca->id],'method'=> 'DELETE'])}}
-                <center>{{Form::submit('Excluir',['class'=>'btn btn-danger'])}}</center>
+                <center>{{Form::submit('Não negociar',['class'=>'btn btn-danger'])}}</center>
                 {{Form::close()}}
             </div>
         @endforeach

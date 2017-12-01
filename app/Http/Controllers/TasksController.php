@@ -18,7 +18,7 @@ class TasksController extends Controller
     {
         $userID = Auth::user()->id;
         $produtos = Task::where('users_id', '=', $userID)->get();
-        $trocas = Troca::where('tasks_id', '=', $userID)->get();
+        $trocas = Troca::where('users_recebeu', '=', $userID)->get();
         //preciso ler tasks_id.user_id;
         return view('tasks.index', array('produtos' => $produtos), array('trocas' => $trocas));
     }
